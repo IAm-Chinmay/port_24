@@ -1,0 +1,41 @@
+.mainAbout {
+  width: 40rem;
+  -webkit-box-shadow: 6px 4px 14px 2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 6px 4px 14px 2px rgba(0, 0, 0, 1);
+  box-shadow: 6px 4px 14px 2px rgba(0, 0, 0, 1);
+  padding: 1rem 2rem 1rem 1rem;
+  margin: 5rem 0 2rem 2rem;
+  border-radius: 10px;
+}
+
+.aboutHead {
+  margin-bottom: 0.9rem;
+  font-weight: 800;
+}
+
+.para {
+  margin-bottom: 2rem;
+  color: #acacad;
+  font-weight: 200;
+}
+
+@media (max-width: 768px) {
+  .mainAbout {
+    width: 100%; /* Adjust width for mobile devices */
+    padding: 0.5rem; /* Adjust padding for mobile devices */
+    margin: 4rem auto; /* Center and adjust margin for mobile devices */
+    text-align: center;
+  }
+}
+
+.aboutHead {
+  margin-bottom: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.para {
+  margin-bottom: 2rem;
+  color: #acacad;
+  font-weight: 200;
+}

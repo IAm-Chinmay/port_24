@@ -1,0 +1,68 @@
+.aboutMySkill {
+  margin-bottom: 0.9rem;
+  font-weight: 800;
+}
+
+.subHead {
+  font-size: 1rem;
+  font-weight: 200;
+  color: rgb(192, 192, 192);
+}
+
+.wSkills {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 4rem 4rem 4rem 4rem 4rem 4rem 4rem;
+  grid-gap: 20px;
+}
+
+.icons {
+  margin: 5px;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .wSkills {
+    grid-template-columns: repeat(5, 4rem); /* 5 columns for tablets */
+  }
+
+  .icons {
+    width: 3rem; /* Smaller icon size for tablets */
+    height: 3rem;
+    font-size: 1.75rem; /* Adjust icon font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .wSkills {
+    grid-template-columns: repeat(10, 4rem); /* 4 columns for mobile */
+  }
+  .icons {
+    width: 3rem; /* Smaller icon size for mobile */
+    height: 3rem;
+    font-size: 2rem; /* Adjust icon font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .wSkills {
+    grid-template-columns: repeat(
+      4,
+      4rem
+    ); /* 2 columns for very small screens */
+  }
+
+  .icons {
+    width: 2rem; /* Smaller icon size for very small screens */
+    height: 2rem;
+    font-size: 3rem; /* Adjust icon font size for very small screens */
+  }
+}

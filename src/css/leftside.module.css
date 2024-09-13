@@ -1,0 +1,154 @@
+.image {
+  border-radius: 50%; /* Ensures perfect circle */
+  object-fit: cover; /* Keeps the image within the bounds */
+  border: 1px solid white;
+  width: 300px; /* Ensure the width and height are equal */
+  height: 300px; /* Same as above */
+  image-rendering: auto; /* Helps with browser-based rendering */
+  -webkit-box-shadow: 1px 13px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 13px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 13px 16px 0px rgba(0, 0, 0, 0.75);
+}
+
+.social {
+  display: flex;
+  width: 15rem;
+  justify-content: space-evenly;
+}
+
+.para {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #acacad;
+}
+
+.head {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  font-weight: 800;
+  width: 35rem;
+}
+
+.leftSide {
+  position: fixed;
+  width: 50%; /* Adjusted fixed width to better fit your layout */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center; /* Center content vertically */
+  padding-left: 6rem; /* Adjust padding as needed */
+  padding-bottom: 3.5rem; /* This could be removed if not needed */
+  padding-top: 1rem;
+}
+.button {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #e32424;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: 800;
+}
+
+.button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button:hover:after {
+  transform: translate(0, 0);
+}
+
+.button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button:hover {
+  outline: 0;
+}
+
+.dSocial {
+  display: flex;
+  width: 29rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .dSocial {
+    flex-direction: column;
+    height: 10rem;
+  }
+  .social {
+    display: flex;
+    width: 15rem;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  .leftSide {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image {
+    width: 150px; /* Smaller size for mobile */
+    height: 150px;
+    margin-bottom: 0rem; /* Space between image and heading */
+    margin-top: 1rem;
+  }
+
+  .head {
+    font-size: 1.5rem; /* Further reduce font size for mobile */
+    width: auto; /* Adjust width to fit mobile screens */
+    margin-bottom: 1rem; /* Space between heading and button */
+  }
+
+  .button {
+    font-size: 12px; /* Even smaller font size for mobile */
+    height: 36px; /* Smaller height for mobile */
+    padding: 0 15px; /* Adjust padding */
+    margin-top: 1rem;
+  }
+
+  .para {
+    display: none; /* Hide paragraph on mobile */
+  }
+}

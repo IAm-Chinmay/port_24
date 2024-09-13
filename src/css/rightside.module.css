@@ -1,0 +1,66 @@
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fade-in effect initially */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Apply the animation with delay */
+}
+
+/* Ensure element is visible after animation */
+.fadeInVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific delays for different elements */
+.fadeInDelay1 {
+  animation-delay: 0.2s; /* Delay for the first element */
+}
+
+.fadeInDelay2 {
+  animation-delay: 0.4s; /* Delay for the second element */
+}
+
+.fadeInDelay3 {
+  animation-delay: 0.6s; /* Delay for the third element */
+}
+
+.fadeInDelay4 {
+  animation-delay: 0.8s; /* Delay for the fourth element */
+}
+
+/* RightSide Container */
+.rightSide {
+  margin-left: 50%; /* Matches the fixed width of .leftSide */
+  width: calc(100% - 300px); /* Dynamic width based on the left side */
+  height: 100vh; /* Full height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Optional padding for content */
+}
+
+/* Media query for tablets and larger devices */
+@media (max-width: 1024px) {
+  .rightSide {
+    margin-left: 60%; /* Adjust margin for tablets */
+    width: calc(100% - 200px); /* Adjust width for tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .rightSide {
+    margin-left: 0; /* Remove left margin on mobile */
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Adjust height to fit content */
+  }
+}
