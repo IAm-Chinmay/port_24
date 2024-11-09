@@ -75,7 +75,7 @@ function SkillAbout() {
       logo: <IoLogoVercel color="black" title="Vercel" cursor={"pointer"} />,
     },
     {
-      logo: <SiNetlify color="#32E6E2" title="Vercel" cursor={"pointer"} />,
+      logo: <SiNetlify color="#32E6E2" title="Netlify" cursor={"pointer"} />,
     },
     {
       logo: <SiMongodb color="green" title="MongoDB" cursor={"pointer"} />,
