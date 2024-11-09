@@ -5,6 +5,17 @@ import styles3 from "../../css/skill.module.css";
 import style from "../../css/project.module.css";
 
 function Projects() {
+  const staticWeb = [
+    {
+      title: "Pune Gases",
+      link: "https://punegasindustries.in/",
+    },
+    {
+      title: "Krushi Kendra",
+      link: "https://shridattakrushisevakendra.in/",
+    },
+  ];
+
   const web = [
     {
       title: "Food Truck",
@@ -39,13 +50,13 @@ function Projects() {
       vid: "https://youtu.be/iff2OLgBqA4",
     },
     {
-      title: "AgroVeda",
+      title: "AgroVeda (Working)",
     },
   ];
 
   return (
     <div className={styles2.mainAbout}>
-      <h1 className={styles2.aboutHead}>Innovation Station</h1>
+      <h1 className={styles2.aboutHead}>Innovation Station</h1>{" "}
       <hr
         style={{
           width: "90%",
@@ -55,6 +66,53 @@ function Projects() {
           height: "3px",
           color: "#333",
           backgroundColor: "#333",
+        }}
+      />
+      <h3 className={styles3.subHead}>Websites</h3>
+      <div className={style.wProject}>
+        {staticWeb.map((ele, index) =>
+          ele.link ? (
+            <div key={index}>
+              <a
+                style={{
+                  all: "unset",
+                }}
+                href={ele.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className={style.buttonV} role="button">
+                  {ele?.title}
+                </button>
+              </a>
+            </div>
+          ) : (
+            <div>
+              <a
+                style={{
+                  all: "unset",
+                }}
+                href={`${ele?.vid}`}
+                target="_blank"
+              >
+                <button className={style.buttonV} role="button">
+                  {ele?.title}
+                </button>
+              </a>
+            </div>
+          )
+        )}
+      </div>
+      <hr
+        style={{
+          width: "90%",
+          marginLeft: "5%",
+          marginBottom: ".9rem",
+          border: "none",
+          height: "3px",
+          color: "#333",
+          backgroundColor: "#333",
+          marginTop: ".9rem",
         }}
       />
       <h3 className={styles3.subHead}>MERN Web Apps</h3>

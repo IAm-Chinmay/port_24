@@ -22,6 +22,7 @@ import {
   SiMongodb,
   SiExpo,
   SiUnrealengine,
+  SiNetlify,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
@@ -72,6 +73,9 @@ function SkillAbout() {
     },
     {
       logo: <IoLogoVercel color="black" title="Vercel" cursor={"pointer"} />,
+    },
+    {
+      logo: <SiNetlify color="#32E6E2" title="Vercel" cursor={"pointer"} />,
     },
     {
       logo: <SiMongodb color="green" title="MongoDB" cursor={"pointer"} />,
